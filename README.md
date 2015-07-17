@@ -12,7 +12,7 @@ The goal of the hackathon is to create a web application that will be the Peace 
 
 Note: We do have mobile products. How would users view/access mobile products?
 
-List of all of Systers Peace Corps projects can be found here >> http://systers.github.io/
+List of all of Systers Peace Corps projects can be found here >> [Systers GitHub page](http://systers.github.io/)
 
 The Peace Corps Hub should include at the highest level access to the following.
 1. Mobile App Control Center
@@ -26,8 +26,8 @@ The Mobile App Control Center should access the following Peace Corps mobile app
 
 All this work was performed during Systers Google Summer of Code 2014 and 2015. Please see the GSoC assignments so for each year so that you can see what the students have worked on for each of the project. This is not a requirement, but you may want to read background on the projects.
 
-GSOC 2014 Assignments
-GSoC 2015 Assignments
+[GSOC 2014 Assignments](http://systers.org/systers-dev/doku.php/gsoc2014assignments)
+[GSoC 2015 Assignments](http://systers.org/systers-dev/doku.php/gsoc2015assignments)
 
 ###Requirements for the Project
 
