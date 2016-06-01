@@ -6776,6 +6776,73 @@ body {
   background-attachment: fixed;
 }
 /* PINGENDO COMMENT DO NOT REMOVE */
+
 .footer-style {
   color: white;
 }
+
+.carousel-inner {
+	margin-bottom:10%;
+}
+
+.carousel-inner .active.left { 
+    left: -25%;             
+}
+
+.carousel-inner .active.right { 
+    left: 25%;              
+}
+
+.carousel-inner .next { 
+    left: 25%   
+}
+
+.carousel-inner .prev { 
+    left: -25%              
+}
+
+.carousel-control.left { 
+    background-image: none; 
+}
+
+.carousel-control.right { 
+    background-image: none; 
+}
+
+.carousel-inner .item { 
+    background: white;
+}
+
+.carousel-control.left {
+	margin-left:0;
+	background-image:none;
+}
+
+.carousel-control.right{
+	margin-right:0;
+	background-image:none;
+}
+
+.carousel-control{
+	width:4%;
+}
+
+/*Hide Carousel Controls until hover*/
+.carousel .carousel-control{
+	display:none;
+}
+
+/*Display Carousel Controls on hover*/
+.carousel:hover .carousel-control{
+	display:block;
+}
+
+.carousel > .thumb-inner{
+	width:90%;
+	position:relative;
+	left:0;
+	right:0;
+	margin:auto;
+}
+
+
