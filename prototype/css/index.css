@@ -6776,9 +6776,14 @@ body {
   background-attachment: fixed;
 }
 /* PINGENDO COMMENT DO NOT REMOVE */
-
 .footer-style {
   color: white;
+}
+.sign-in-message {
+  margin-top: 50px;
+}
+.login-radio-group {
+  margin-bottom: 10px;
 }
 
 .carousel-inner {
@@ -6827,13 +6832,8 @@ body {
 	width:4%;
 }
 
-/*Hide Carousel Controls until hover*/
-.carousel .carousel-control{
-	display:none;
-}
-
 /*Display Carousel Controls on hover*/
-.carousel:hover .carousel-control{
+.carousel-control{
 	display:block;
 }
 
@@ -6844,5 +6844,4 @@ body {
 	right:0;
 	margin:auto;
 }
-
 

@@ -43,13 +43,10 @@
       </div>
     </nav>
     <div class="section">
-      <div class="container"></div>
-    </div>
-    <div class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="text-center">Sign In Message</h1>
+            <h1 class="text-center sign-in-message">Sign In Message</h1>
           </div>
         </div>
         <div class="row">
@@ -57,7 +54,7 @@
             <div class="section">
               <div class="container">
                 <div class="row">
-                  <div class="col-md-4"></div>
+                  <div class="col-md-4 hidden-sm hidden-xs"></div>
                   <div class="col-md-4">
                     <form role="form">
                       <div class="form-group">
@@ -67,6 +64,14 @@
                       <div class="form-group">
                         <label class="control-label" for="exampleInputPassword1">Password</label>
                         <input class="form-control" id="exampleInputPassword1" placeholder="Password" type="password">
+                      </div>
+                      <div class="row text-center login-radio-group">
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio">Administrator</label>
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio">PC Staff</label>
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio">PC Volunteer</label>
                       </div>
                       <button type="submit" class="btn btn-block btn-success">Submit</button>
                     </form>

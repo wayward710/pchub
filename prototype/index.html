@@ -6,7 +6,7 @@
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css">
   </head><body>
-    <div class="cover">
+    <div class="cover" id="home">
       <div class="background-image-fixed cover-image" style="background-image : url('image/PCBanner.jpg')"></div>
       <div class="container">
         <div class="row">
@@ -20,9 +20,13 @@
                     <p class="hidden-xs text-justify">Lorem ipsum dolor sit amet, consectetur adipisici elit sit am
                       <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim
                       ad minim veniam, quis nostrud eiusmod tem</p>
-                    <div class="col-md-12 text-center">
-                      <a class="btn btn-block btn-danger" tabindex="0" href="login.html">Sign In</a>
-                      <a class="btn btn-block btn-danger" tabindex="0">Sign Up<br></a>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <a class="btn btn-block btn-danger" href="login.html">Sign In</a>
+                      </div>
+                      <div class="col-md-6">
+                        <a class="btn btn-block btn-danger">Sign Up</a>
+                      </div>
                     </div>
                     <p></p>
                   </div>
@@ -36,7 +40,7 @@
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" id="menu-header">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -63,16 +67,16 @@
               <a href="#">Sign Up</a>
             </li>
             <li>
-              <a href="app_list.html">Mobile Apps List</a>
+              <a href="web_list.html">Web Apps</a>
             </li>
             <li>
-              <a href="web_list.html">Web Apps List</a>
+              <a href="app_list.html">Mobile Apps</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="section">
+    <div class="section" id="web-apps">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -95,7 +99,7 @@
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section" id="mobile-apps">
       <div class="container">
         <div class="row">
           <div class="col-md-6">

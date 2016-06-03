@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+    $('.carousel').carousel({
+        interval: false
+    }); 
+    
     $('.carousel .item').each(function(){
       var next = $(this).next();
       
