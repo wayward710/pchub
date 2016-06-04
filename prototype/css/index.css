@@ -1086,7 +1086,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: Lato;
+  font-family: "Lato";
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -5825,7 +5825,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: Lato;
+  font-family: "Lato";
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5932,7 +5932,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: Lato;
+  font-family: "Lato";
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6779,9 +6779,11 @@ body {
 .footer-style {
   color: white;
 }
+
 .sign-in-message {
   margin-top: 50px;
 }
+
 .login-radio-group {
   margin-bottom: 10px;
 }
@@ -6829,7 +6831,7 @@ body {
 }
 
 .carousel-control{
-	width:4%;
+	width:1%;
 }
 
 /*Display Carousel Controls on hover*/
@@ -6838,10 +6840,9 @@ body {
 }
 
 .carousel > .thumb-inner{
-	width:90%;
+	width:95%;
 	position:relative;
 	left:0;
 	right:0;
 	margin:auto;
 }
-
