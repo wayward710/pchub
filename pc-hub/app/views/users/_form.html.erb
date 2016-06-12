@@ -1,0 +1,19 @@
+<%= bootstrap_form_for(@user) do |f| %>
+  <div class = "row">
+    <div class = "col-md-6">
+      <%= f.text_field :name %>
+      <%= f.text_field :nickname, label: "Nickname (optional)"%>
+      <%= f.email_field :email %>
+      <%= f.password_field :password %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <div class = "col-md-6">
+      <%= f.text_field :city %>
+      <%= f.text_field :state_or_province, label: "State or Province (optional)"%>
+      <%= f.select :country, [["Macedonia, the former Yugoslav Republic of", 0], [2, "Grape"]], { label: "Country" }, { class: "selectpicker" } %>
+      <%= f.url_field :profile_link, label: "Profile Link (optional)" %>
+      <%= f.text_area :additional_information, label: "Additionial Information (optional)"%>
+    </div>
+  </div>
+  <%= f.submit "Save", class: "btn btn-success"  %>
+<% end %>
