@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand page-scroll" href="#page-top" tabindex="0">Peace Corps</a>
+          <%= image_tag 'Peace_Corps_Logo_Banner_CMYK', :class => "brand" %>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
@@ -60,48 +60,14 @@
       </div>
     </nav>
 
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <%= bootstrap_flash %>
-            <%= yield %>
-          </div>
-        </div><!--/row-->
-      </div> <!-- /container -->
-    </div> <!-- /section -->
+    <%= bootstrap_flash %>
+    <%= yield %>
 
-    <footer class="section section-primary">
+    <footer class="section section-footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6 footer-style">
-            <h1>Footer header</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
-              <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-              <br>Ut enim ad minim veniam, quis nostrud</p>
-            </div>
-            <div class="col-sm-6">
-              <p class="text-info text-right">
-                <br>
-                <br>
-              </p>
-              <div class="row">
-                <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
-                  <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 hidden-xs text-right">
-                  <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-                </div>
-              </div>
-            </div>
+          <div class="col-sm-4 footer-style">
+            <%= image_tag 'logo-stacked-white', :class => "brand" %>
           </div>
         </div>
       </footer>

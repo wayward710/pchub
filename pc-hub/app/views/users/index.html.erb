@@ -1,50 +1,52 @@
-<%- model_class = User -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="cover" id="home">
+	<div class="background-image-fixed cover-image">
+	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section text-left">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1>Peace Corps</h1>
+                                <p></p>
+                                <p class="hidden-xs text-justify">Lorem ipsum dolor sit amet, consectetur adipisici elit sit am
+                                    <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud eiusmod tem
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="btn btn-block btn-danger" href="login.html">Sign In</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn btn-block btn-danger">Sign Up</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:nickname) %></th>
-      <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:country) %></th>
-      <th><%= model_class.human_attribute_name(:state_or_province) %></th>
-      <th><%= model_class.human_attribute_name(:city) %></th>
-      <th><%= model_class.human_attribute_name(:profile_link) %></th>
-      <th><%= model_class.human_attribute_name(:additional_information) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to user.id, user_path(user) %></td>
-        <td><%= user.name %></td>
-        <td><%= user.nickname %></td>
-        <td><%= user.email %></td>
-        <td><%= user.country %></td>
-        <td><%= user.state_or_province %></td>
-        <td><%= user.city %></td>
-        <td><%= user.profile_link %></td>
-        <td><%= user.additional_information %></td>
-        <td><%=l user.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_user_path(user), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      user_path(user),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_user_path,
-            :class => 'btn btn-primary' %>
+<div class="section section-text" id="web-apps">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+            	<%= image_tag 'desktop', :class => "img-responsive" %>
+            </div>
+            <div class="col-md-6">
+                <h1 class="text-primary">Peace Corps Web Applications</h1>
+                <h3>A subtitle</h3>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                    dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                    nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+                    enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
+                    felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+                    elementum semper nisi.</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'users#index'
   get 'index' => 'users#index'
 
+  get 'user_list' => 'users#list'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
