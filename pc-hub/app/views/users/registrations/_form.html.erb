@@ -4,6 +4,7 @@
       <%= f.text_field :name %>
       <%= f.text_field :nickname, label: "Nickname (Optional)"%>
       <%= f.email_field :email %>
+      <%= f.email_field :email_confirmation %>
       <%= f.password_field :password %>
       <%= f.password_field :password_confirmation %>
     </div>
@@ -12,7 +13,7 @@
       <%= f.text_field :state_or_province, label: "State or Province (Optional)"%>
       <%= f.select :country, [["Macedonia, the former Yugoslav Republic of", 0], [2, "Grape"]], { label: "Country" }, { class: "selectpicker" } %>
       <%= f.url_field :profile_link, label: "Profile Link (Optional)" %>
-      <%= f.text_area :additional_information, label: "Additionial Information (Optional)"%>
+      <%= f.text_area :additional_information, label: "Additionial Information (Optional)", rows: 5 %>
     </div>
   </div>
   <div class="actions">

@@ -11,5 +11,4 @@ class ApplicationController < ActionController::Base
     	  :city, :state_or_province, :country, :profile_link, :additional_information)}
       devise_parameter_sanitizer.for(:account_update) {|u| u.permit(:name)}   
   end
-
 end
