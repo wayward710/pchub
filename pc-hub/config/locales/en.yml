@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    errors:
+      messages:
+        blank: "Can't be blank"
+        too_short: "Password too short (minimum is 6 characters)"
+        confirmation: "%{attribute} doesn't match"
+        invalid: "Invalid %{attribute}"

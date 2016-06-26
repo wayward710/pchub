@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 	validates :name, presence: true
 	validates :country, presence: true
 	validates :city, presence: true
+	validates :email, confirmation: true
 end
