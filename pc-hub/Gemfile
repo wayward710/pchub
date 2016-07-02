@@ -41,6 +41,8 @@ gem "therubyracer"
 # Gem for user authentication
 gem 'devise'
 
+gem 'cancancan', '~> 1.10'
+
 #Gem for country selection
 gem 'country_select'
 

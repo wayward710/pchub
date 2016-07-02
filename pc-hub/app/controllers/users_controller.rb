@@ -3,8 +3,12 @@ class UsersController < ApplicationController
 
   # GET /users
   # GET /users.json
-  def index
-    @users = User.all
+  def list
+    if params[:approved] 
+       @users = User.all
+    else
+      @users = User.where(approved: false)
+    end
   end
 
   # GET /users/1
@@ -62,6 +66,7 @@ class UsersController < ApplicationController
   end
 
   private
+    def 
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
@@ -70,6 +75,6 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :nickname, :email, :email_confirmation, 
-        :password, :country, :state_or_province, :city, :profile_link, :additional_information)
+        :password, :country, :state_or_province, :city, :profile_link, :additional_information, :role)
     end
 end
