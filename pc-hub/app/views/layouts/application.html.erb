@@ -57,7 +57,7 @@
             <li><%= link_to "Mobile Apps", "#mobile-apps"  %></li>
             <% if current_user.present? %>
               <%= drop_down "Settings" do %>
-                  <% if current_user.role == "admin" %>
+                  <% if current_user.role == "admin" || current_user.role == "superadmin" %>
                     <%= menu_item "Users solicitations", user_list_path, :action => "index", :approved => "false" %>
                   <% end %>
                   <%= drop_down_divider %>

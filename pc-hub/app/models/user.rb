@@ -7,16 +7,16 @@ class User < ActiveRecord::Base
     validates :country, presence: true
     validates :city, presence: true
     validates :email, confirmation: true
-
+   
     def role?(role)
         return self.role == role.to_s
     end
 
     def active_for_authentication?
-        if self.role == "admin"
-            super && approved? 
+        if self.role? :admin
+            self.approved = super && approved? 
         else
-            return true
+            self.approved = true
         end
     end
 

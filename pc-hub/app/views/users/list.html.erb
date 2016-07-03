@@ -15,6 +15,8 @@
                       <th><%= model_class.human_attribute_name(:country) %></th>
                       <th><%= model_class.human_attribute_name(:state_or_province) %></th>
                       <th><%= model_class.human_attribute_name(:city) %></th>
+                      <th><%= model_class.human_attribute_name(:approved) %></th>
+                      <th><%= model_class.human_attribute_name(:role) %></th>
                       <th><%= model_class.human_attribute_name(:profile_link) %></th>
                       <th><%= model_class.human_attribute_name(:created_at) %></th>
                       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -30,12 +32,15 @@
                             <td><%= user.country %></td>
                             <td><%= user.state_or_province %></td>
                             <td><%= user.city %></td>
+                            <td><%= user.approved %></td>
+                            <td><%= user.role %></td>
                             <td><%= user.profile_link %></td>
                             <td><%=l user.created_at %></td>
                             <td>
                               <%= link_to "Approve", approve_user_path(user), :method => "approve", :class => "btn btn-default btn-xs" %>
                               <%= link_to t('.edit', :default => t("helpers.links.edit")),
                               edit_user_path(user), :class => 'btn btn-default btn-xs' %>
+
                               <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                               user_path(user),
                               :method => :delete,
@@ -47,8 +52,8 @@
                 </tbody>
             </table>
 
-            <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_user_path,
+            <%= link_to t('.new', :default => t("Add new user")),
+             new_user_registration_path ,
             :class => 'btn btn-primary' %>
         </div>
     </div>
