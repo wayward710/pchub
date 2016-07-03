@@ -32,6 +32,9 @@
         <td><%= user.additional_information %></td>
         <td><%=l user.created_at %></td>
         <td>
+         
+           <%= link_to t('.approve', :default => t("Approve")),
+                      user_path(user), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_user_path(user), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

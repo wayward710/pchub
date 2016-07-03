@@ -1,14 +1,21 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource :only => [:approve]
 
   # GET /users
   # GET /users.json
   def list
     if params[:approved] 
-       @users = User.all
+      @users = User.all
     else
       @users = User.where(approved: false)
     end
+  end
+
+  def approve
+    @user = User.find(params[:id])
+    @user.update_attribute(:approved, true)
+    redirect_to :back
   end
 
   # GET /users/1

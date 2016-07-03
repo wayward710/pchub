@@ -8,7 +8,7 @@ class Ability
     end
 
     if user.role? :admin
-
+        can :approve, User
     end
 
     if user.role? :staff

@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
         if !approved? 
             :not_approved 
         else 
-            super # Use whatever other message 
+            super 
         end 
     end
 end
