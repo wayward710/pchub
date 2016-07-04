@@ -39,7 +39,9 @@ gem 'bootstrap_form'
 gem "therubyracer"
 
 # Gem for user authentication
-gem 'devise'
+gem 'devise', '4.0'
+
+gem 'devise_invitable', '~> 1.6.0'
 
 gem 'cancancan', '~> 1.10'
 

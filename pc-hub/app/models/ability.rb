@@ -9,6 +9,7 @@ class Ability
 
     if user.role? :admin
         can :approve, User
+        can :create, User
     end
 
     if user.role? :staff
