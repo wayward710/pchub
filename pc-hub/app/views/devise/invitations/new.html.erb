@@ -5,14 +5,35 @@
 				<h2><%= t "devise.invitations.new.header" %></h2>
 			</div>
 
-			<%= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
-			 
-			<% resource.class.invite_key_fields.each do |field| -%>
-			  <%= f.text_field field %>
-			  
-			<% end -%>
+			<%= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>			
 
-			  <p><%= f.submit t("devise.invitations.new.submit_button") %></p>
+				<div class = "row">
+    				<div class = "col-md-6">
+						<%= f.text_field :name %>
+						<%= f.text_field :nickname, label: "Nickname (Optional)"%>
+						<% resource.class.invite_key_fields.each do |field| -%>
+							<%= f.text_field field %>
+						<% end -%>
+					    <%= f.text_area :additional_information, label: "Additionial Information (Optional)", rows: 5 %>
+					    
+					</div>
+				    <div class = "col-md-6">
+				    	<%= f.text_field :city %>
+				    	<%= f.text_field :state_or_province, label: "State or Province (Optional)"%>
+				    	<%= f.form_group :country, label: {text: "Country"} do %>
+				    		<%= f.country_select :country, { include_blank: "Select a country" }, 
+				        		{ class: "form-control selectpicker" } %>
+				    	<% end %>
+				    	<%= f.url_field :profile_link, label: "Profile Link (Optional)" %>
+				    	<%= f.form_group :role, label: { text: "Role" } do %>
+					      <%= f.radio_button :role, "admin", label: "Administrator", inline: true %>
+					      <%= f.radio_button :role, "staff", label: "Staff", inline: true %>
+					      <%= f.radio_button :role, "volunteer", label: "Volunteer", inline: true %>
+					    <% end %>
+				    </div>
+    			</div>
+			  	<p><%= f.submit t("devise.invitations.new.submit_button") %></p>
+
 			<% end %>
 		</div>
 	</div>

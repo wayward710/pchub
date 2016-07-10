@@ -2,11 +2,12 @@ class User < ActiveRecord::Base
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
     devise :database_authenticatable, :registerable, :invitable,
-    :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable, :validate_on_invite => true
     validates :name, presence: true
     validates :country, presence: true
     validates :city, presence: true
     validates :email, confirmation: true
+    validates :role, presence: true
    
     def role?(role)
         return self.role == role.to_s
