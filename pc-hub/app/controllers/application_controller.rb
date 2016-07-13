@@ -25,14 +25,15 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:invite).concat [:name, :nickname, :city, 
-    :state_or_province, :country, :profile_link, :additional_information, :role]
+    :state_or_province, :country, :profile_link, :additional_information, :role, :approved]
 
     devise_parameter_sanitizer.for(:accept_invitation).concat [:name, :email, :email_confirmation, 
       :nickname, :city, :state_or_province, :country, :profile_link, :additional_information]
 
     devise_parameter_sanitizer.for(:accept_invitation) do |u|
       u.permit(:name, :email, :email_confirmation, :nickname, :city, :state_or_province,
-             :country, :profile_link, :additional_information, :invitation_token)
+             :country, :profile_link, :additional_information, :invitation_token, 
+             :password, :password_confirmation)
     end
 
   end 
