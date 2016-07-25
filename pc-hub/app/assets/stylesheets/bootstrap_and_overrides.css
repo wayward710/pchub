@@ -21,6 +21,14 @@
   background-color: rgba(255, 255, 255, 0.98);
 }
 
+.nav-pills > li.active > a {
+  background-color: #3095B4;
+}
+
+.nav-pills > li.active > a:hover {
+  background-color: #2b86a1;
+}
+
 .section-footer {
     background-image: url('pattern-charcoal.png');
 }
@@ -145,4 +153,9 @@
 
 .sub-icon {
     float: right;
+}
+
+.turquoise {
+  background-color: #3095B4;
+  color: white;
 }
