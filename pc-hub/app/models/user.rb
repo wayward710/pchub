@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     validates :email, confirmation: true
     validates :role, presence: true
 
-    if self.created_by_invite
+    if self.created_by_invite == true
         validate :inviter_has_permission_to_invite
     end
 
