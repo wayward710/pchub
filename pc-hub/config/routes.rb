@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'user_list' => 'users#list'
 
-  get 'users/user_solicitations' => 'users#solicitations'
+  get 'user_search' => 'users#search'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -138,3 +138,11 @@
   margin-top: 50px;
   margin-bottom: 0px;
 }
+
+.long-search-bar {
+  width: 93%;
+}
+
+.sub-icon {
+    float: right;
+}
