@@ -1,0 +1,11 @@
+<%= bootstrap_form_for(@application) do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_area :description, label: "Description", rows: 5 %>
+
+    <div class="actions">
+      <%= f.submit "Save", class: "btn btn-success"  %>
+    </div>
+    
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                applications_path, :class => 'btn btn-default' %>
+<% end %>

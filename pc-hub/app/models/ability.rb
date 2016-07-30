@@ -7,7 +7,6 @@ class Ability
     if user.role? :superadmin
         can :manage, :all
         can :search, :all
-        can :delete, :all
     end
 
     if user.role? :admin
@@ -24,6 +23,7 @@ class Ability
     if user.role? :volunteer
         can :search, :all
     end
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
