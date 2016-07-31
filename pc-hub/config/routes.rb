@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notifications
   resources :applications
   devise_for :users
   resources :users do
@@ -10,9 +11,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  root 'applications#index'
   
-  get 'index' => 'users#index'
+  get 'application/index' => 'applications#index'
 
   get 'user/list' => 'users#list'
 

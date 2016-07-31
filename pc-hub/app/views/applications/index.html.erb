@@ -180,6 +180,8 @@
                     enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
                     felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
                     elementum semper nisi.</p>
+
+                <%= content_tag :a, "Add new mobile application", href: "#new_mobile_app_form", class: 'btn btn-default btn-block', data: {toggle: 'modal'} %>
             </div>
         </div>
     </div>
@@ -228,10 +230,24 @@
     <div class="modal-content">
       <div class="modal-header">
         <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Add the new app information</h4>
+        <h4 class="modal-title">Add the new web app information</h4>
       </div>
       <div class="modal-body">
-        <%= render :partial => 'form' %>
+        <%= render :partial => 'web_form' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bootstrap-modal modal fade" id="new_mobile_app_form">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Add the new mobile app information</h4>
+      </div>
+      <div class="modal-body">
+        <%= render :partial => 'mobile_form' %>
       </div>
     </div>
   </div>

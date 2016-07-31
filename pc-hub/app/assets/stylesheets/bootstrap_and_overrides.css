@@ -100,34 +100,23 @@
     left: -25%              
 }
 
+.carousel-control{
+    width:1%;
+    display:block;
+}
+
 .carousel-control.left { 
     background-image: none; 
+    margin-left:0;
 }
 
 .carousel-control.right { 
     background-image: none; 
+    margin-right:0;
 }
 
 .carousel-inner .item { 
     background: white;
-}
-
-.carousel-control.left {
-    margin-left:0;
-    background-image:none;
-}
-
-.carousel-control.right{
-    margin-right:0;
-    background-image:none;
-}
-
-.carousel-control{
-    width:1%;
-}
-
-.carousel-control{
-    display:block;
 }
 
 .carousel > .thumb-inner{
