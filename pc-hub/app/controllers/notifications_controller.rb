@@ -12,6 +12,11 @@ class NotificationsController < ApplicationController
   def show
   end
 
+  # GET /notifications/new
+  def new
+    @notification = Notification.new
+  end
+
   # GET /notifications/1/edit
   def edit
   end
@@ -64,6 +69,6 @@ class NotificationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def notification_params
-      params.require(:notification).permit(:title, :content)
+      params.require(:notification).permit(:title, :content, :application_id)
     end
 end
