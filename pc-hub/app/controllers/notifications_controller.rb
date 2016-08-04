@@ -12,11 +12,6 @@ class NotificationsController < ApplicationController
   def show
   end
 
-  # GET /notifications/new
-  def new
-    @notification = Notification.new
-  end
-
   # GET /notifications/1/edit
   def edit
   end

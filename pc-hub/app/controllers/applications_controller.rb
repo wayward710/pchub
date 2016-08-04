@@ -11,6 +11,8 @@ class ApplicationsController < ApplicationController
   # GET /applications/1
   # GET /applications/1.json
   def show
+    @notification = Notification.new
+    @application_id = params[:application_id]
   end
 
   # GET /applications/1/edit

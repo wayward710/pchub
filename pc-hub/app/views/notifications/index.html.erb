@@ -7,6 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Content</th>
+      <th>Content</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= notification.title %></td>
         <td><%= notification.content %></td>
+        <td><%= notification.application_id %></td>
         <td><%= link_to 'Show', notification %></td>
         <td><%= link_to 'Edit', edit_notification_path(notification) %></td>
         <td><%= link_to 'Destroy', notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>

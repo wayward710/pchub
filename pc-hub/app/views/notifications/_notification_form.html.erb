@@ -1,0 +1,7 @@
+<%= bootstrap_form_for(@notification) do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_area :content %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
