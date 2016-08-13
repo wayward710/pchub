@@ -52,9 +52,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", "#home"  %></li>
-            <li><%= link_to "Web Apps", "#web-apps"  %></li>
-            <li><%= link_to "Mobile Apps", "#mobile-apps"  %></li>
+            <li><%= link_to "Home", root_path  %></li>
+            <li><%= link_to "Web Apps", "/applications#web-apps"  %></li>
+            <li><%= link_to "Mobile Apps", "/applications#mobile-apps"  %></li>
             <% if current_user.present? %>
               <%= drop_down "Settings" do %>
                   <% if current_user.role == "admin" || current_user.role == "superadmin" %>
