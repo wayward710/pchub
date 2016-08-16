@@ -31,37 +31,31 @@
 <div class="section">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <h2>What is new?</h2>
-        <hr>
-        <ul class="media-list">
-          <% @application.notifications.each do |notification| %>
-            <li class="media">
-                <div class="media-body">
-                    <h4 class="media-heading">
-                      <%= notification.title %>
-                    </h4>
-                    <p>
-                      <%= notification.content %>
-                    </p>
-                </div>
-            </li>
-          <% end %>
-        </ul>
-        <a class="btn btn-default">View all notifications <i class="fa fa-fw fa-list"></i></a>
-        <% if current_user.present? %>
-          <% if current_user.role == "admin" || current_user.role == "superadmin" %>
-            <%= content_tag :a, "Add new web application", href: "#new_notification_form", class: 'btn btn-default', data: {toggle: 'modal'} do %>
-                Add new notification
-                <i class="fa fa-fw fa-plus-circle"></i>
-            <% end %>
+      <h2>What is new?</h2>
+      <hr>
+      <ul class="media-list">
+        <% @application.notifications.each do |notification| %>
+          <li class="media">
+              <div class="media-body">
+                  <h4 class="media-heading">
+                    <%= notification.title %>
+                  </h4>
+                  <p>
+                    <%= notification.content %>
+                  </p>
+              </div>
+          </li>
+        <% end %>
+      </ul>
+      <a class="btn btn-default">View all notifications <i class="fa fa-fw fa-list"></i></a>
+      <% if current_user.present? %>
+        <% if current_user.role == "admin" || current_user.role == "superadmin" %>
+          <%= content_tag :a, "Add new web application", href: "#new_notification_form", class: 'btn btn-default', data: {toggle: 'modal'} do %>
+              Add new notification
+              <i class="fa fa-fw fa-plus-circle"></i>
           <% end %>
         <% end %>
-      </div>
-      <div class="col-md-6">
-          <h2>Forum topics</h2>
-          <hr>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
