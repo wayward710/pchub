@@ -6,11 +6,11 @@ class ApplicationsController < ApplicationController
   # GET /applications.json
   def index
     @applications = Application.all
-    new()
   end
 
   def new
     @application = Application.new
+    @application.platform = params[:platform]
   end
 
   def add_notification
@@ -75,7 +75,7 @@ class ApplicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
-      params.require(:application).permit(:name, :description, :platform, :app_image, 
+      params.require(:application).permit(:name, :description, :short_description, :platform, :app_image, 
         :slider_image, :repository_link, :app_link)
     end
 end

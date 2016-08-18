@@ -14,6 +14,7 @@ class Ability
         can :create, User
         can :search, :all
         can :delete, :all
+        can :manage, Application
     end
 
     if user.role? :staff

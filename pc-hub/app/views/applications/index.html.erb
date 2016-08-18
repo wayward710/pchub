@@ -49,7 +49,7 @@
                     elementum semper nisi.
                 </p>
 
-                <%= content_tag :a, "Add new web application", href: "#new_web_app_form", class: 'btn btn-default btn-block', data: {toggle: 'modal'} %>
+                <%= link_to "Add new web application", new_application_path(platform: 'web'), class: 'btn btn-default btn-block' %>
             </div>
         </div>
     </div>
@@ -144,7 +144,7 @@
                     felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
                     elementum semper nisi.</p>
 
-                <%= content_tag :a, "Add new mobile application", href: "#new_mobile_app_form", class: 'btn btn-default btn-block', data: {toggle: 'modal'} %>
+                <%= link_to "Add new mobile application", new_application_path(platform: 'mobile'), class: 'btn btn-default btn-block' %>
             </div>
         </div>
     </div>
@@ -190,31 +190,3 @@
         </div>
     </div>
 <% end %>
-
-<div class="bootstrap-modal modal fade" id="new_web_app_form">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Add the new web app information</h4>
-      </div>
-      <div class="modal-body">
-        <%= render :partial => 'web_form' %>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="bootstrap-modal modal fade" id="new_mobile_app_form">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Add the new mobile app information</h4>
-      </div>
-      <div class="modal-body">
-        <%= render :partial => 'mobile_form' %>
-      </div>
-    </div>
-  </div>
-</div>
