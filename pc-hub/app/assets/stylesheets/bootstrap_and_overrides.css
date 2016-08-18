@@ -148,3 +148,7 @@
     background-color: #3095B4;
     color: white;
 }
+
+.modal-dialog {
+    width: 800px;
+}

@@ -49,6 +49,8 @@ gem 'cancancan', '~> 1.10'
 #Gem for country selection
 gem 'country_select'
 
+#Gem for save images on database
+gem "paperclip", "~> 5.0.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

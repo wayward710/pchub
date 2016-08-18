@@ -1,17 +1,26 @@
 class ApplicationsController < ApplicationController
   before_action :set_application, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource :only => [:new]
 
   # GET /applications
   # GET /applications.json
   def index
     @applications = Application.all
+    new()
+  end
+
+  def new
     @application = Application.new
+  end
+
+  def add_notification
+    @notification = Notification.new
   end
 
   # GET /applications/1
   # GET /applications/1.json
   def show
-    @notification = Notification.new
+    add_notification()
   end
 
   # GET /applications/1/edit
@@ -66,6 +75,7 @@ class ApplicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
-      params.require(:application).permit(:name, :description, :operating_system)
+      params.require(:application).permit(:name, :description, :platform, :app_image, 
+        :slider_image, :repository_link, :app_link)
     end
 end
