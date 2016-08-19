@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   
   get 'application/index' => 'applications#index'
 
+  get 'application/search' => 'applications#search'
+
   get 'user/list' => 'users#list'
 
   get 'user/search' => 'users#search'

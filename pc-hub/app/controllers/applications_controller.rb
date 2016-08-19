@@ -13,6 +13,10 @@ class ApplicationsController < ApplicationController
     @application.platform = params[:platform]
   end
 
+  def search
+    @applications = Application.search(params[:search]).order("created_at DESC")
+  end
+
   def add_notification
     @notification = Notification.new
   end

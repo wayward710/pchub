@@ -11,4 +11,9 @@ class Application < ActiveRecord::Base
   		content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
   	validates_attachment :app_image, presence: true,
   		content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+
+  	def self.search(search)
+      where("name LIKE ?", "%#{search}%") 
+    end
+    
 end
