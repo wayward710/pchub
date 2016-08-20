@@ -1,6 +1,10 @@
 class ApplicationsController < ApplicationController
   before_action :set_application, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource :only => [:new]
+  load_and_authorize_resource :only => [:new, :add_notification, :edit, :destroy]
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to main_app.root_url, :alert => exception.message
+  end
 
   # GET /applications
   # GET /applications.json
