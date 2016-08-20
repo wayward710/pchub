@@ -9,14 +9,14 @@
             <nav class="col-sm-2">
               <ul class="nav nav-pills nav-stacked">
                 <li class="active">
-                  <a href='#'>Users
-                    <i class="sub-icon glyphicon glyphicon-user"></i>
-                  </a>
+                  <%= link_to user_search_path do %>
+                    <i class="sub-icon glyphicon glyphicon-user"></i>Users
+                  <% end %>
                 </li>
                 <li>
-                  <a href='#'>Applications
-                     <i class="sub-icon fa fa-desktop"></i>
-                  </a>
+                  <%= link_to application_search_path do %>
+                    <i class="sub-icon fa fa-desktop"></i>Applications
+                  <% end %>
                 </li>
               </ul>
             </nav>
