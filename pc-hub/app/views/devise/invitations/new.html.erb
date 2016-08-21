@@ -27,6 +27,9 @@
 				    	<%= f.url_field :profile_link, label: "Profile Link (Optional)" %>
 				    	<%= f.form_group :role, label: { text: "Role" } do %>
 				    	  <% if current_user.role == "superadmin" %>
+				            <%= f.radio_button :role, "superadmin", label: "Super Administrator", inline: true %>
+				          <% end %>
+				    	  <% if current_user.role == "superadmin" %>
 					      	<%= f.radio_button :role, "admin", label: "Administrator", inline: true %>
 					      <% end %>
 

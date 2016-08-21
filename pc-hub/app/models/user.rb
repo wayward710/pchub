@@ -43,6 +43,12 @@ class User < ActiveRecord::Base
     def inviter_has_permission_to_invite
         inviter = User.find(self.invited_by_id)
 
+        if self.role == "superadmin"
+            unless inviter.role == "superadmin"
+                raise CanCan::AccessDenied
+            end
+        end
+
         if inviter.role == "admin"
             unless self.role == "staff" || self.role == "volunteer"
                 raise CanCan::AccessDenied
