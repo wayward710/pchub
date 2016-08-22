@@ -22,6 +22,12 @@ class User < ActiveRecord::Base
         return self.role == role.to_s
     end
 
+    def admin
+        if self.role? :superadmin or self.role? :admin
+            return true
+        end
+    end
+
     def active_for_authentication?
         if self.role? :admin
             self.approved = super && approved? 

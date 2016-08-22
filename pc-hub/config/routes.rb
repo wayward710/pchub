@@ -7,10 +7,11 @@ Rails.application.routes.draw do
         post 'approve'
     end
   end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
+  #root of the site"
   root 'applications#index'
   
   get 'application/index' => 'applications#index'
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   get 'user/list' => 'users#list'
 
   get 'user/search' => 'users#search'
+
+  mount Thredded::Engine => '/forum'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

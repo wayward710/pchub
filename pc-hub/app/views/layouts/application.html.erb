@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title><%= content_for?(:title) ? yield(:title) : "PcHub" %></title>
   <%= csrf_meta_tags %>
 
@@ -95,11 +96,11 @@
         </div>
       </div>
     </nav>
-
+    
     <%= bootstrap_flash %>
     <%= yield %>
 
-    <footer class="section section-footer">
+    <footer class="section-footer">
       <div class="container footer-size">
         <div class="row">
           <div class="col-sm-4 footer-style">

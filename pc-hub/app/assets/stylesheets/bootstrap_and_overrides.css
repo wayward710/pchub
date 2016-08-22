@@ -11,12 +11,6 @@
 
 @import 'twitter/bootstrap';
 
-.body {
-    font-family: "Arial";
-    font-size: 14px;
-    color: #333333;
-}
-
 .navbar-default {
     background-color: rgba(255, 255, 255, 0.98);
 }
@@ -31,6 +25,7 @@
 
 .section-footer {
     background-image: url('pattern-charcoal.png');
+    padding: 35px 0;
 }
 
 .section {
@@ -147,8 +142,4 @@
 .turquoise {
     background-color: #3095B4;
     color: white;
-}
-
-.modal-dialog {
-    width: 800px;
 }
