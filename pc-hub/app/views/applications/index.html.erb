@@ -48,8 +48,11 @@
                     felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
                     elementum semper nisi.
                 </p>
-
-                <%= link_to "Add new web application", new_application_path(platform: 'web'), class: 'btn btn-default btn-block' %>
+                <% if current_user.present? %>
+                    <% if current_user.role == "admin" or current_user.role == "superadmin" %>
+                        <%= link_to "Add new web application", new_application_path(platform: 'web'), class: 'btn btn-default btn-block' %>
+                    <% end %>
+                <% end %>
             </div>
         </div>
     </div>
@@ -190,7 +193,11 @@
                     felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
                     elementum semper nisi.</p>
 
-                <%= link_to "Add new mobile application", new_application_path(platform: 'mobile'), class: 'btn btn-default btn-block' %>
+                <% if current_user.present? %>
+                    <% if current_user.role == "admin" or current_user.role == "superadmin" %>
+                        <%= link_to "Add new mobile application", new_application_path(platform: 'mobile'), class: 'btn btn-default btn-block' %>
+                    <% end %>
+                <% end %>
             </div>
         </div>
     </div>
