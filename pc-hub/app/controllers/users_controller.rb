@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
 	before_action :set_user, only: [:show, :edit, :update, :destroy]
-	load_and_authorize_resource :only => [:approve, :search, :edit, :new, :update, :destroy]
+	load_and_authorize_resource :only => [:approve, :search, :edit, :new, :update, 
+		:destroy]
 
 	rescue_from CanCan::AccessDenied do |exception|
     	redirect_to main_app.root_url, :alert => exception.message
@@ -76,7 +77,7 @@ class UsersController < ApplicationController
 	def destroy
 		@user.destroy
 		respond_to do |format|
-			format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+			format.html { redirect_to root_path, notice: 'User was successfully destroyed.' }
 			format.json { head :no_content }
 		end
 	end
@@ -91,6 +92,7 @@ class UsersController < ApplicationController
 	# Never trust parameters from the scary internet, only allow the white list through.
 	def user_params
 		params.require(:user).permit(:name, :nickname, :email, :email_confirmation, 
-		:password, :country, :state_or_province, :city, :profile_link, :additional_information, :role)
+		:password, :country, :state_or_province, :city, :profile_link, :additional_information, 
+		:role, :approved)
 	end
 end
