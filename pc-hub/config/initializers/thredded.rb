@@ -3,7 +3,7 @@
 
 # ==> View Configuration
 # Set the layout for rendering the thredded views.
-Thredded.layout = 'layouts/application'
+Thredded.layout = 'thredded/application'
 
 # ==> User Configuration
 # The name of the class your app uses for your users.

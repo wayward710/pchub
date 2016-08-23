@@ -8,10 +8,14 @@ class User < ActiveRecord::Base
     validates :country, presence: true
     validates :city, presence: true
     validates :email, confirmation: true
-    validates :role, presence: true
+    validates :role, presence: 
 
     if self.created_by_invite == true
         validate :inviter_has_permission_to_invite
+    end
+
+    def to_s
+        name
     end
 
     def self.search(search)
