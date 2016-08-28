@@ -71,7 +71,7 @@
                                         <%= @applications.where(:platform => 'web').first.name %>
                                     </h2>
                                     <p class="text-justify brand-blue">
-                                        <%= @applications.where(:platform => 'web').first.description %>
+                                        <%= @applications.where(:platform => 'web').first.short_description %>
                                     </p>
 
                                     <%= link_to "Read More", application_path(@applications.where(:platform => 'web').first), class: "btn btn-block btn-success" %>
@@ -104,7 +104,7 @@
                                                 <%= application.name %>
                                             </h2>
                                             <p class="text-justify brand-blue">
-                                                <%= application.description %>
+                                                <%= application.short_description %>
                                             </p>
                                             <%= link_to "Read More", application_path(application), class: "btn btn-block btn-success" %>
 
@@ -147,7 +147,7 @@
                                 <%= application.name %>
                             </h2>
                             <p class="text-justify brand-blue">
-                                <%= application.description %>
+                                <%= application.short_description %>
                             </p>
                             <%= link_to "Read More", application_path(application), class: "btn btn-block btn-success" %>
 
@@ -216,7 +216,7 @@
                                     <%= @applications.where('platform=? OR platform=?', 'ios', 'android').first.name %>
                                 </h2>
                                 <p class="text-justify brand-blue">
-                                    <%= @applications.where('platform=? OR platform=?', 'ios', 'android').first.description %>
+                                    <%= @applications.where('platform=? OR platform=?', 'ios', 'android').first.short_description %>
                                 </p>
 
                                 <%= link_to "Read More", application_path(@applications.where('platform=? OR platform=?', 'ios', 'android').first), class: "btn btn-block btn-success" %>
@@ -248,7 +248,7 @@
                                                 <%= application.name %>
                                             </h2>
                                             <p class="text-justify brand-blue">
-                                                <%= application.description %>
+                                                <%= application.short_description %>
                                             </p>
                                             <%= link_to "Read More", application_path(application), class: "btn btn-block btn-success" %>
 
@@ -290,7 +290,7 @@
                                 <%= application.name %>
                             </h2>
                             <p class="text-justify brand-blue">
-                                <%= application.description %>
+                                <%= application.short_description %>
                             </p>
                             <%= link_to "Read More", application_path(application), class: "btn btn-block btn-success" %>
 
