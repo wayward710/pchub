@@ -7,6 +7,7 @@ class Ability
     if user.role? :superadmin
         can :manage, :all
         can :search, :all
+        can :invite, User
     end
 
     if user.role? :admin
@@ -15,6 +16,7 @@ class Ability
         can :search, :all
         can :delete, :all
         can :manage, Application
+        can :invite, User
     end
 
     if user.role? :staff
