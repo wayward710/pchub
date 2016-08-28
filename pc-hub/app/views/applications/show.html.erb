@@ -28,14 +28,18 @@
           <br>
           <br>
           <div class="col-md-6">
-            <% if current_user.role == "admin" || current_user.role == "superadmin" %>
-              <%= link_to "Edit this application", edit_application_path(platform: 'web'), class: 'btn btn-default btn-block' %>
-              <% end %>
+            <% if current_user.present? %>
+              <% if current_user.role == "admin" || current_user.role == "superadmin" %>
+                <%= link_to "Edit this application", edit_application_path(platform: 'web'), class: 'btn btn-default btn-block' %>
+                <% end %>
+            <% end %>
           </div>
           <div class="col-md-6">
-            <% if current_user.role == "admin" || current_user.role == "superadmin" %>
-              <%= link_to t('.destroy', :default => t("Delete this application")),
-                                application_path(@application), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => "Are you sure?" )) }, :class => 'btn btn-default btn-block' %>
+            <% if current_user.present? %>
+              <% if current_user.role == "admin" || current_user.role == "superadmin" %>
+                <%= link_to t('.destroy', :default => t("Delete this application")),
+                                  application_path(@application), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => "Are you sure?" )) }, :class => 'btn btn-default btn-block' %>
+              <% end %>
             <% end %>
           </div>
         </div>
