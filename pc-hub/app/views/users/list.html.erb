@@ -38,7 +38,7 @@
                             <td><%= user.city %></td>
                             <td><%= user.role %></td>
                             <td><%= user.profile_link %></td>
-                            <td><%=l user.created_at %></td>
+                            <td><%= user.created_at %></td>
                             <td>
                               <%= link_to "Approve", approve_user_path(user), :method => "approve", :class => "btn btn-default btn-xs" %>
                               <%= link_to t('.edit', :default => t("helpers.links.edit")),
