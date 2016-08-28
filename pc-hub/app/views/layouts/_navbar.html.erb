@@ -15,10 +15,13 @@
             <li><%= link_to "Home", root_path  %></li>
             <li><%= link_to "Web Apps", "/applications#web-apps"  %></li>
             <li><%= link_to "Mobile Apps", "/applications#mobile-apps"  %></li>
+            <li><%= link_to "Forum", "/forum", method: :get  %></li>
             <% if current_user.present? %>
               <%= drop_down "Settings" do %>
+                  <%= menu_item "Edit my profile", edit_user_registration_path %>
                   <% if current_user.role == "admin" || current_user.role == "superadmin" %>
                     <%= menu_item "Users solicitations", user_list_path, :action => "index", :approved => "false" %>
+                    <%= menu_item "Invite new user", new_user_invitation_path %>
                   <% end %>
                   <%= drop_down_divider %>
                   <%= menu_item "Sign Out", destroy_user_session_path, method: :delete %>
@@ -26,7 +29,7 @@
             <% end %>
           </ul>
           <% if current_user.present? %>
-            <div class="col-md-6 pull-right">
+            <div class="col-md-5 pull-right">
               <%= form_tag(user_search_path, :method => "get", id: "search-form", class: "navbar-form") do %>
                   <div class="input-group long-search-bar">
                       <%= text_field_tag :search, params[:search], placeholder: "Search users and apps", class: "form-control" %>
