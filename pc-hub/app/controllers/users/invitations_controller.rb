@@ -11,6 +11,7 @@ class Users::InvitationsController < Devise::InvitationsController
        super
      end
    end
+
    def create
      if cannot?( :invite, User )
        raise CanCan::AccessDenied

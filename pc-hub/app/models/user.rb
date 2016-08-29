@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
     end
 
     def self.search(search)
-      where("name LIKE ?", "%#{search}%") 
+        where("name LIKE ?", "%#{search}%") 
     end
    
     def role?(role)
@@ -33,8 +33,12 @@ class User < ActiveRecord::Base
     end
 
     def active_for_authentication?
-        if self.role? :admin
-            self.approved = super && approved? 
+        if self.role? :admin or self.role? :superadmin
+            if self.created_by_invite?
+                self.approved = true
+            else
+                self.approved = super && approved? 
+            end
         else
             self.approved = true
         end
