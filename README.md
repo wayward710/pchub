@@ -1,5 +1,4 @@
-#2015 Systers Qualcomm Hack
-##Peace Corps Hub
+#Peace Corps Hub
 
 ###Background
 
